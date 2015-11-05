@@ -26,18 +26,36 @@
  * @since       04.11.15
  */
 
-#main_table {
-  .url {
-    div {
-      margin-bottom: 3px;
-    }
+body.index {
 
-    .laemmi_url {
-      margin-bottom: 6px;
-    }
+  #wrap {
+    //max-width: 80%;
   }
 
-  .keyword {
-    //font-size: 14px;
+  #main_table {
+    .url {
+      div {
+        margin-bottom: 3px;
+      }
+
+      .laemmi_url {
+        margin-bottom: 6px;
+      }
+    }
+
+    .keyword {
+      //font-size: 14px;
+    }
+
+    .timestamp {
+      div {
+        display: table-row;
+        span {
+          display: table-cell;
+          padding: 0 2px 2px 0;
+          white-space: nowrap;
+        }
+      }
+    }
   }
 }

@@ -42,9 +42,9 @@ use Laemmi\Yourls\Plugin\AbstractDefault;
 class Plugin extends AbstractDefault
 {
     /**
-     * Localization domain
+     * Namespace
      */
-    const LOCALIZED_DOMAIN = 'laemmi-yourls-admin';
+    const APP_NAMESPACE = 'laemmi-yourls-admin';
 
 
     ####################################################################################################################
@@ -59,10 +59,16 @@ class Plugin extends AbstractDefault
 
     /**
      * Action: html_head
+     *
+     * @param array $args
      */
-    public function action_html_head()
+    public function action_html_head(array $args)
     {
-        echo $this->getCssStyle();
+        list($context) = $args;
+
+        if('index' === $context) {
+            echo $this->getCssStyle();
+        }
     }
 
     /*public function action_admin_page_before_form() {
