@@ -47,6 +47,8 @@ if (!yourls_is_API()) {
         require_once 'lib/Plugin.php';
         new Laemmi\Yourls\Admin\Plugin([]);
     } else {
-        echo 'Please install "laemmi-yourls-default-tools" first!';
+        if('activate' === (isset($_GET['action']) ? $_GET['action'] : null) && 'laemmi-yourls-admin' === $_GET['plugin']) {
+            echo 'Please install "laemmi-yourls-default-tools" first!';
+        }
     }
 }
