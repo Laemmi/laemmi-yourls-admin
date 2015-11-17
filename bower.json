@@ -1,0 +1,19 @@
+{
+  "name": "laemmi-yourls-admin",
+  "version": "1.0",
+  "authors": [
+    "Michael Lämmlein <ml@spacerabbit.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "bootstrap": "~3.3.5"
+  }
+}

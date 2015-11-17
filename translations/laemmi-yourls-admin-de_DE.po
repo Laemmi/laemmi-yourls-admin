@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-11-16 11:55+0100\n"
+"PO-Revision-Date: 2015-11-17 15:50+0100\n"
+"Last-Translator: Michael Lämmlein <m.laemmlein@wdv.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.7\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: yourls__\n"
+"X-Poedit-SearchPath-0: lib\n"
+"X-Poedit-SearchPath-1: templates\n"
+"X-Poedit-SearchPath-2: cache\n"
+
+#: /tmp/cache/5649b62a432eb:2
+msgid "Create new"
+msgstr "Neu erstellen"
+
+#: /tmp/cache/5649b62a432eb:11
+msgid "Original URL"
+msgstr "Original URL"
+
+#: /tmp/cache/5649b62a432eb:22
+msgid "Short URL"
+msgstr "Short URL"
+
+#: /tmp/cache/5649b62a432eb:28
+msgid "Add short URL."
+msgstr "Fügen Sie eine Short URL hinzu."
+
+#: /tmp/cache/5649b62a432eb:40
+msgid "Comment"
+msgstr "Kommentar"
+
+#: /tmp/cache/5649b62a432eb:46
+msgid "Add comment."
+msgstr "Fügen Sie einen Kommentar hinzu."
+
+#: /tmp/cache/5649b62a432eb:58
+msgid "Label"
+msgstr "Stichworte"
+
+#: /tmp/cache/5649b62a432eb:64
+msgid "Add label."
+msgstr "Fügen Sie Stichworte hinzu."
+
+#: /tmp/cache/5649b62a432eb:66
+msgid "Add labels comma separated"
+msgstr "Stichworte durch Komma getrennt eingeben"
+
+#: /tmp/cache/5649b62a432eb:73
+msgid "Create"
+msgstr "Erstellen"
+
+#~ msgid "Add short URL"
+#~ msgstr "Fügen Sie einen Kurz Url."
+
+#~ msgid "Hello World!"
+#~ msgstr "Hello World! DE"

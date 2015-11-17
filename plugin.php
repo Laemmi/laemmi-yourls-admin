@@ -44,8 +44,10 @@ if(!defined('YOURLS_ABSPATH'))die();
 if (!yourls_is_API()) {
     // Check if AbstractDefault class exists
     if(class_exists('Laemmi\Yourls\Plugin\AbstractDefault')) {
-        require_once 'lib/Plugin.php';
-        new Laemmi\Yourls\Admin\Plugin([]);
+        require_once 'lib/Laemmi/Yourls/Plugin/Admin/Plugin.php';
+        new Laemmi\Yourls\Plugin\Admin\Plugin([
+            'allowed_groups' => defined('LAEMMI_EASY_LDAP_ALLOWED_GROUPS') ? json_decode(LAEMMI_EASY_LDAP_ALLOWED_GROUPS, true) : []
+        ]);
     } else {
         if('activate' === (isset($_GET['action']) ? $_GET['action'] : null) && 'laemmi-yourls-admin' === $_GET['plugin']) {
             echo 'Please install "laemmi-yourls-default-tools" first!';
