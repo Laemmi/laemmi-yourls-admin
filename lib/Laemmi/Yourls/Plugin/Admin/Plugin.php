@@ -256,6 +256,9 @@ class Plugin extends AbstractDefault
         $cells['url']['template'] = preg_replace("/^\<a.*?\<\/small\>/", '<div class="laemmi_url"><a href="%long_url%" title="%long_url%">%long_url_html%</a></div>', $cells['url']['template']);
 
 
+        unset($cells['ip']);
+
+
 //        $cells['keyword']['template'] = '<a href="%shorturl%">%shorturl%</a>';
 //        $cells['keyword']['template'] = '<a href="%shorturl%">%keyword_html%</a>';
 
@@ -278,6 +281,15 @@ class Plugin extends AbstractDefault
         $admin_links['admin']['anchor'] = yourls__('Home', self::APP_NAMESPACE);
 
         return $admin_links;
+    }
+
+    public function filter_table_head_cells()
+    {
+        list($arr) = func_get_args();
+
+        unset($arr['ip']);
+
+        return $arr;
     }
 
     ####################################################################################################################
