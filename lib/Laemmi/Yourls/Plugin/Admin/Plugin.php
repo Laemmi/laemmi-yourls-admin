@@ -121,6 +121,14 @@ class Plugin extends AbstractDefault
     }
 
     /**
+     * Action: admin_page_before_content
+     */
+    public function action_admin_page_before_content()
+    {
+        echo '<div id="PageStats">';
+    }
+
+    /**
      * Action: admin_page_before_form
      */
     public function action_admin_page_before_form()
@@ -136,6 +144,7 @@ class Plugin extends AbstractDefault
             $panels[] = 'form_new_url-panel-label.twig';
         }
 
+        echo '</div>';
         echo $this->getTemplate()->render('form_new_url', [
             'nonce_add' => yourls_create_nonce('add_url'),
             'panels' => $panels
@@ -257,6 +266,18 @@ class Plugin extends AbstractDefault
 //    ),
 
         return $cells;
+    }
+
+    /**
+     * Filter: admin_links
+     */
+    public function filter_admin_links()
+    {
+        list($admin_links) = func_get_args();
+
+        $admin_links['admin']['anchor'] = yourls__('Home', self::APP_NAMESPACE);
+
+        return $admin_links;
     }
 
     ####################################################################################################################
