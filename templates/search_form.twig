@@ -1,0 +1,64 @@
+<form action="" method="get">
+    <div class="panel panel-default">
+        <div id="filter_options" class="panel-body">
+            <div class="row_line">
+                Suche nach <input type="text" name="search" class="text" size="12" value="{{ search_text }}"> in
+
+                <select name="search_in" id="search_in" size="1">
+                    {% for key, val in select.search_in %}
+                        <option value="{{ key }}" {% if key == search_in %} selected="selected"{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+                –
+                Sortiert nach
+
+                <select name="sort_by" id="sort_by" size="1">
+                    {% for key, val in select.sort_by %}
+                        <option value="{{ key }}" {% if key == sort_by %} selected="selected"{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="sort_order" id="sort_order" size="1">
+                    {% for key, val in select.sort_order %}
+                        <option value="{{ key }}" {% if key == sort_order %} selected="selected"{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+                –
+                Zeige <input type="text" name="perpage" class="text" size="2" value="{{ perpage }}"> Zeilen
+            </div>
+
+            <div class="row_line">
+                Zeige Links mit
+
+                <select name="click_filter" id="click_filter" size="1">
+                    {% for key, val in select.click_filter %}
+                        <option value="{{ key }}" {% if key == click_filter %} selected="selected"{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+
+                als <input type="text" name="click_limit" class="text" size="4" value="{{ click_limit }}">  Klicks
+            </div>
+
+            <div class="row_line" style="float: left">
+                Zeige erstellte Links
+
+                <select name="date_filter" id="date_filter" size="1">
+                    {% for key, val in select.date_filter %}
+                        <option value="{{ key }}" {% if key == date_filter %} selected="selected"{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+
+                <input type="text" name="date_first" id="date_first" class="text" size="12" value="{{ date_first }}">
+                <span id="date_and"{% if date_filter == 'between' %} style="display:inline"{% endif %}>&amp;</span>
+                <input type="text" name="date_second" id="date_second" class="text" size="12" value="{{ date_second }}"{% if date_filter == 'between' %} style="display:inline"{% endif %}>
+            </div>
+
+            <div id="filter_buttons">
+                <input type="submit" id="submit-sort" value="Suche" class="btn btn-primary btn-sm">
+                &nbsp;
+                <input type="button" id="submit-clear-filter" value="Zurücksetzen" class="btn btn-default btn-sm" onclick="window.parent.location.href = 'index.php'">
+            </div>
+            <br clear="all">
+        </div>
+    </div>
+</form>

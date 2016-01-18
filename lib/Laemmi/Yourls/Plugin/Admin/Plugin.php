@@ -158,10 +158,82 @@ class Plugin extends AbstractDefault
      */
     public function filter_table_head_start()
     {
-        $start = '<table id="main_table" class="table table-condensed small tblSorter_"><thead><tr>';
-
-        return $start;
+        ob_start();
     }
+
+    private $_string_main_table_head = '';
+
+    /**
+     * Filter: table_head_end
+     */
+    public function filter_table_head_end()
+    {
+        $this->_string_main_table_head = ob_get_contents();
+        ob_end_clean();
+        ob_start();
+    }
+
+    /**
+     * Action: html_tfooter
+     */
+    public function action_html_tfooter()
+    {
+        global $params;
+        ob_end_clean();
+
+        $select = [
+            'search_in' => array(
+                'all'     => yourls__('All fields'),
+                'keyword' => yourls__('Short URL'),
+                'url'     => yourls__('URL'),
+                'title'   => yourls__('Title'),
+                'ip'      => yourls__('IP'),
+            ),
+            'sort_by' => array(
+                'keyword'      => yourls__( 'Short URL' ),
+                'url'          => yourls__( 'URL' ),
+                'timestamp'    => yourls__( 'Date' ),
+                'ip'           => yourls__( 'IP' ),
+                'clicks'       => yourls__( 'Clicks' ),
+            ),
+            'sort_order' => array(
+                'asc'  => yourls__( 'Ascending' ),
+                'desc' => yourls__( 'Descending' ),
+            ),
+            'click_filter' => array(
+                'more' => yourls__( 'more' ),
+                'less' => yourls__( 'less' ),
+            ),
+            'date_filter' => array(
+                'before'  => yourls__('before'),
+                'after'   => yourls__('after'),
+                'between' => yourls__('between'),
+            ),
+        ];
+
+        echo $this->getTemplate()->render('table_head', [
+            'main_table_head' => $this->_string_main_table_head,
+            'select'        => $select,
+            'search_text'   => yourls_esc_attr($params['search_text']),
+            'perpage'       => isset($params['perpage'])?$params['perpage']:'',
+            'click_limit'   => isset($params['click_limit'])?$params['click_limit']:'',
+            'date_first'   => isset($params['date_first'])?$params['date_first']:'',
+            'date_second'   => isset($params['date_second'])?$params['date_second']:'',
+
+            'search_in'     => isset($params['search_in'])?$params['search_in']:'',
+            'sort_by'       => isset($params['sort_by'])?$params['sort_by']:'',
+            'sort_order'    => isset($params['sort_order'])?$params['sort_order']:'',
+            'click_filter'  => isset($params['click_filter'])?$params['click_filter']:'',
+            'date_filter'   => isset($params['date_filter'])?$params['date_filter']:'',
+        ]);
+
+//        echo "<pre>";
+//        print_r($params);
+//        echo "</pre>";
+
+        echo '<tfoot>';
+    }
+
 
     /**
      * Filter table_add_row_cell_array
