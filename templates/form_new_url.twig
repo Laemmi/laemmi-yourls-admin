@@ -1,4 +1,7 @@
-<div id="new_url2">
+<button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#new_url2">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ yourls__('Add new URL') }}
+</button>
+<div id="new_url2" class="collapse">
     <form id="new_url_form" action="" method="get">
         <input type="hidden" name="action" value="add"/>
         <input type="hidden" name="nonce" value="{{ nonce_add }}"/>

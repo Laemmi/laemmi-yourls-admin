@@ -54,7 +54,25 @@ body.index {
     }
   }
 
+  #new_url2 {
+    padding: 10px 0;
+    #new_url_form {
+      padding: 0;
+    }
+  }
+
   #main_table {
+    .row-searchform {
+      th {
+        border: none;
+        padding: 10px 0;
+
+        .panel {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     .url {
       div {
         margin-bottom: 3px;
