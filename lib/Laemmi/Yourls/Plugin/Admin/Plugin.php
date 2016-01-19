@@ -110,13 +110,8 @@ class Plugin extends AbstractDefault
         list($context) = $args;
 
         if('index' === $context) {
-            $path = yourls_site_url(false) . '/user/plugins/' . self::APP_NAMESPACE . '/assets/lib/bootstrap/dist';
+            echo $this->getBootstrap();
             echo $this->getCssStyle();
-            echo trim('
-            <link href="' . $path . '/css/bootstrap.min.css" rel="stylesheet">
-            <link href="' . $path . '/css/bootstrap-theme.min.css" rel="stylesheet">
-            <script src="' . $path . '/js/bootstrap.min.js"></script>
-            ');
         }
     }
 
