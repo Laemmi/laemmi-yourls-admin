@@ -148,7 +148,8 @@ class Plugin extends AbstractDefault
         echo $this->getTemplate()->render('form_new_url', [
             'nonce_add' => yourls_create_nonce('add_url'),
             'panels' => $panels,
-            'ldapgrouplist' => $this->_options['ldapgrouplist']
+            'ldapgrouplist' => $this->_options['ldapgrouplist'],
+            'ldapgrouplist_value' => array_keys($this->_getOwnGroups()),
         ]);
         ob_start();
     }
@@ -287,5 +288,17 @@ class Plugin extends AbstractDefault
         unset($arr['ip']);
 
         return $arr;
+    }
+
+    ####################################################################################################################
+
+    /**
+     * Get own groups
+     *
+     * @return array
+     */
+    private function _getOwnGroups()
+    {
+        return array_intersect_key($this->_options['allowed_groups'], $this->getSession('groups', 'laemmi-yourls-easy-ldap'));
     }
 }

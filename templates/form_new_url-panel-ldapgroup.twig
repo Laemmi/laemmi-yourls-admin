@@ -12,7 +12,7 @@
             <div class="form-group">
                 <select class="form-control" name="ldapgroup[]" multiple>
                     {% for key,val in ldapgrouplist %}
-                        <option value="{{ key }}">{{ val }}</option>
+                        <option value="{{ key }}"{% if key in ldapgrouplist_value %} selected{% endif %}>{{ val }}</option>
                     {% endfor %}
                 </select>
             </div>
