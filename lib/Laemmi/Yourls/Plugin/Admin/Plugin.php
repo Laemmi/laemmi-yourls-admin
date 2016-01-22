@@ -60,6 +60,7 @@ class Plugin extends AbstractDefault
      */
     const PERMISSION_ACTION_EDIT_COMMENT = 'action-edit-comment';
     const PERMISSION_ACTION_EDIT_LABEL = 'action-edit-label';
+    const PERMISSION_ACTION_ADD_GROUP = 'action-add-ldapgroup';
 
     /**
      * Admin permissions
@@ -68,7 +69,8 @@ class Plugin extends AbstractDefault
      */
     protected $_adminpermission = [
         self::PERMISSION_ACTION_EDIT_COMMENT,
-        self::PERMISSION_ACTION_EDIT_LABEL
+        self::PERMISSION_ACTION_EDIT_LABEL,
+        self::PERMISSION_ACTION_ADD_GROUP,
     ];
 
     /**
@@ -128,21 +130,25 @@ class Plugin extends AbstractDefault
      */
     public function action_admin_page_before_form()
     {
-        $permissions = $this->helperGetAllowedPermissions();
-
         $panels = [];
         $panels[] = 'form_new_url-panel-shorturl.twig';
-        if(isset($permissions[self::PERMISSION_ACTION_EDIT_COMMENT])) {
+
+        if($this->_hasPermission(self::PERMISSION_ACTION_ADD_GROUP)) {
+            $panels[] = 'form_new_url-panel-ldapgroup.twig';
+        }
+
+        if($this->_hasPermission(self::PERMISSION_ACTION_EDIT_COMMENT)) {
             $panels[] = 'form_new_url-panel-comment.twig';
         }
-        if(isset($permissions[self::PERMISSION_ACTION_EDIT_LABEL])) {
+        if($this->_hasPermission(self::PERMISSION_ACTION_EDIT_LABEL)) {
             $panels[] = 'form_new_url-panel-label.twig';
         }
 
         echo '</div>';
         echo $this->getTemplate()->render('form_new_url', [
             'nonce_add' => yourls_create_nonce('add_url'),
-            'panels' => $panels
+            'panels' => $panels,
+            'ldapgrouplist' => $this->_options['ldapgrouplist']
         ]);
         ob_start();
     }
@@ -230,10 +236,6 @@ class Plugin extends AbstractDefault
             'click_filter'  => isset($params['click_filter'])?$params['click_filter']:'',
             'date_filter'   => isset($params['date_filter'])?$params['date_filter']:'',
         ]);
-
-//        echo "<pre>";
-//        print_r($params);
-//        echo "</pre>";
 
         echo '<tfoot>';
     }

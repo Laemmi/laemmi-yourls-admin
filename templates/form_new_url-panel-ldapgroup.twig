@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title_">
+            <a data-toggle="collapse" href="#LdapgroupCollapse">
+                + {{ yourls__('Group') }}
+            </a>
+        </div>
+    </div>
+    <div id="LdapgroupCollapse" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <p>{{ yourls__('Select Group.') }}</p>
+            <div class="form-group">
+                <select class="form-control" name="ldapgroup[]" multiple>
+                    {% for key,val in ldapgrouplist %}
+                        <option value="{{ key }}">{{ val }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-01-18 14:57+0100\n"
-"PO-Revision-Date: 2016-01-18 15:01+0100\n"
+"POT-Creation-Date: 2016-01-22 09:21+0100\n"
+"PO-Revision-Date: 2016-01-22 09:22+0100\n"
 "Last-Translator: Michael Lämmlein <m.laemmlein@wdv.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -17,103 +17,111 @@ msgstr ""
 "X-Poedit-SearchPath-1: templates\n"
 "X-Poedit-SearchPath-2: cache\n"
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:195
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:196
 msgid "All fields"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:196
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:202
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef476313a435KJq:5
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:197
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:203
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa7616viyAeI:5
 msgid "Short URL"
 msgstr "Short URL"
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:197
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:203
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:198
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:204
 msgid "URL"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:198
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:199
 msgid "Title"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:199
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:205
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:200
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:206
 msgid "IP"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:204
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:205
 msgid "Date"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:206
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:207
 msgid "Clicks"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:209
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:210
 msgid "Ascending"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:210
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:211
 msgid "Descending"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:213
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:214
 msgid "more"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:214
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:215
 msgid "less"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:217
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:218
 msgid "before"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:218
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:219
 msgid "after"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:219
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:220
 msgid "between"
 msgstr ""
 
-#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:281
+#: lib/Laemmi/Yourls/Plugin/Admin/Plugin.php:278
 msgid "Home"
 msgstr "Home"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef4762dfbI0GqcS:5
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa6f8aUSMv5J:5
 msgid "Comment"
 msgstr "Kommentar"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef4762dfbI0GqcS:11
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa6f8aUSMv5J:11
 msgid "Add comment."
 msgstr "Fügen Sie einen Kommentar hinzu."
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef4762ff590p1eO:5
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa723bcDpNKj:5
 msgid "Label"
 msgstr "Stichworte"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef4762ff590p1eO:11
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa723bcDpNKj:11
 msgid "Add label."
 msgstr "Fügen Sie Stichworte hinzu."
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef4762ff590p1eO:13
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa723bcDpNKj:13
 msgid "Add labels comma separated"
 msgstr "Stichworte durch Komma getrennt eingeben"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef476313a435KJq:11
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa744fsooA6A:5
+msgid "Group"
+msgstr "Gruppe"
+
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa744fsooA6A:11
+msgid "Select Group."
+msgstr "Wählen Sie eine oder mehrere Gruppen aus."
+
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa7616viyAeI:11
 msgid "Add short URL."
 msgstr "Fügen Sie eine Short URL hinzu."
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef476328dU23X3A:2
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa77e8ea3ocL:2
 msgid "Add new URL"
 msgstr "Neue URL erstellen"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef476328dU23X3A:11
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa77e8ea3ocL:11
 msgid "Original URL"
 msgstr "Original URL"
 
-#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/569cef476328dU23X3A:22
+#: /private/var/folders/91/hprv3g_9hprsjf9n25dwk2km000qq7/T/56a1e67fa77e8ea3ocL:22
 msgid "Create"
 msgstr "Erstellen"
 
