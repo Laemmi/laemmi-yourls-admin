@@ -3,9 +3,13 @@
         <tr class="row-searchform">
             <th colspan="6">
                 {% include 'search_form.twig' %}
+                <div style="text-align: center; margin-top: 10px">{{ p_pages_total }}</div>
+                <nav style="text-align:center">
+                    {{ pagination|raw }}
+                </nav>
             </th>
         </tr>
-        <tr>
+        <tr id="TableTitle">
             {{ main_table_head|raw }}
         </tr>
     {#</thead>#}

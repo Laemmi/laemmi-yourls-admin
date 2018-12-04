@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: laemmi´s admin
+Plugin Name: wdv admin page
 Plugin URI: https://github.com/Laemmi/laemmi-yourls-admin
 Description: Redesign admin page
 Version: 1.0
-Author: Michael Lämmlein
-Author URI: https://github.com/Laemmi
-Copyright 2015 laemmi
+Author: wdv
+Author URI: https://github.com/Laemmi/
+Copyright 2015 wdv
 */
 
 /**
@@ -30,8 +30,8 @@ Copyright 2015 laemmi
  *
  * @category    laemmi-yourls-admin
  * @package     plugin.php
- * @author      Michael Lämmlein <ml@spacerabbit.de>
- * @copyright   ©2015 laemmi
+ * @author      Michael Lämmlein <laemmi@spacerabbit.de>
+ * @copyright   ©2015 wdv
  * @license     http://www.opensource.org/licenses/mit-license.php MIT-License
  * @version     1.0.0
  * @since       13.10.15
@@ -47,7 +47,7 @@ if (!yourls_is_API()) {
         require_once 'lib/Laemmi/Yourls/Plugin/Admin/Plugin.php';
         new Laemmi\Yourls\Plugin\Admin\Plugin([
             'allowed_groups' => defined('LAEMMI_EASY_LDAP_ALLOWED_GROUPS') ? json_decode(LAEMMI_EASY_LDAP_ALLOWED_GROUPS, true) : [],
-            'ldapgrouplist' => defined('LAEMMI_BIND_USER_TO_ENTRY_GROUPLIST') ? json_decode(LAEMMI_BIND_USER_TO_ENTRY_GROUPLIST, true) : [],
+            'projectlist' => defined('LAEMMI_BIND_USER_TO_ENTRY_PROJECTLIST') ? json_decode(LAEMMI_BIND_USER_TO_ENTRY_PROJECTLIST, true) : [],
         ]);
     } else {
         if('activate' === (isset($_GET['action']) ? $_GET['action'] : null) && 'laemmi-yourls-admin' === $_GET['plugin']) {

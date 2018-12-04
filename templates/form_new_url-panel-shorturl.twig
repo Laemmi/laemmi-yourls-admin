@@ -11,6 +11,9 @@
             <p>{{ yourls__('Add short URL.') }}</p>
             <div class="form-group">
                 <input type="text" id="add-keyword" class="form-control" name="keyword" value=""/>
+                <span id="helpBlock" class="help-block small">
+                    <span class="glyphicon glyphicon-info-sign"></span> {{ yourls__('Allowed characters are "%s". All character will be convert to lowercase')|format(shorturl_charset) }}
+                </span>
             </div>
         </div>
     </div>

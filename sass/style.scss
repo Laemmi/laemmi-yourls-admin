@@ -19,8 +19,8 @@
  *
  * @category    laemmi-yourls-admin
  * @package     style.scss
- * @author      Michael Lämmlein <ml@spacerabbit.de>
- * @copyright   ©2015 laemmi
+ * @author      Michael Lämmlein <laemmi@spacerabbit.de>
+ * @copyright   ©2015 wdv
  * @license     http://www.opensource.org/licenses/mit-license.php MIT-License
  * @version     1.0.0
  * @since       04.11.15
@@ -78,7 +78,7 @@ body.index {
         margin-bottom: 3px;
       }
 
-      .laemmi_url {
+      .wdv_url {
         margin-bottom: 6px;
       }
     }
@@ -105,6 +105,14 @@ body.index {
     .actions {
       .button {
         margin-bottom: 5px;
+        //visibility: visible;
+      }
+    }
+
+    .edit-row {
+      .buttons {
+        vertical-align: middle;
+        text-align: center;
       }
     }
   }

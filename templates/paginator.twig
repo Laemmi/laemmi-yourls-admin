@@ -1,0 +1,35 @@
+{% if paginator.getTotalpagesNumber() > 1 %}
+    <ul class="pagination pagination-sm" style="margin: 5px 0">
+        {% if paginator.firstPage() %}
+            <li><a href="{{ paginator.url(paginator.firstPage()) }}" title="{{ yourls__('Go to First Page') }}">&laquo;</a></li>
+        {% else %}
+            <li class="disabled"><a href="#"><span>&laquo;</span></a></li>
+        {% endif %}
+
+        {% if paginator.previousPage() %}
+            <li><a href="{{ paginator.url(paginator.previousPage()) }}" title="{{ yourls__('Previous Page') }}">&lsaquo;</a></li>
+        {% else %}
+            <li class="disabled"><a href="#"><span>&lsaquo;</span></a></li>
+        {% endif %}
+
+        {% for page in paginator %}
+            {% if page == paginator.getCurrentPageNumber() %}
+                <li class="active"><a href="#">{{ page }}</a></li>
+            {% else %}
+                <li><a href="{{ paginator.url(page) }}" title="{{ yourls__('Page %s')|format(page) }}">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.nextPage() %}
+            <li><a href="{{ paginator.url(paginator.nextPage()) }}" title="{{ yourls__('Next Page') }}">&rsaquo;</a></li>
+        {% else %}
+            <li class="disabled"><a href="#"><span>&rsaquo;</span></a></li>
+        {% endif %}
+
+        {% if paginator.lastPage() %}
+            <li><a href="{{ paginator.url(paginator.lastPage()) }}" title="{{ yourls__('Go to Last Page') }}">&raquo;</a></li>
+        {% else %}
+            <li class="disabled"><a href="#"><span>&raquo;</span></a></li>
+        {% endif %}
+    </ul>
+{% endif %}

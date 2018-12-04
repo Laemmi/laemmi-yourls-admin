@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title_">
+            <a data-toggle="collapse" href="#LdapgroupCollapse">
+                + {{ yourls__('Project') }}
+            </a>
+        </div>
+    </div>
+    <div id="LdapgroupCollapse" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <p>{{ yourls__('Select Project.') }}</p>
+            <div class="form-group">
+                <select class="form-control" name="project[]" multiple>
+                    {% for key,val in projectlist %}
+                        <option value="{{ key }}"{% if key in projectlist_value %} selected{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

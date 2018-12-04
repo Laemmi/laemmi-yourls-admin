@@ -53,9 +53,17 @@
                 <input type="text" name="date_second" id="date_second" class="text" size="12" value="{{ date_second }}"{% if date_filter == 'between' %} style="display:inline"{% endif %}>
             </div>
 
+            <div class="row_line" style="clear:both">
+                <label>Auswahl nach Projekt</label>
+                <select name="projectlist[]" style="vertical-align: text-top">
+                    {% for key,val in select.projectlist %}
+                        <option value="{{ key }}"{% if key in projectlist_value %} selected{% endif %}>{{ val }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
             <div id="filter_buttons">
                 <input type="submit" id="submit-sort" value="Suche" class="btn btn-primary btn-sm">
-                &nbsp;
                 <input type="button" id="submit-clear-filter" value="Zurücksetzen" class="btn btn-default btn-sm" onclick="window.parent.location.href = 'index.php'">
             </div>
             <br clear="all">
