@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: wdv admin page
+Plugin Name: laemmi admin page
 Plugin URI: https://github.com/Laemmi/laemmi-yourls-admin
 Description: Redesign admin page
 Version: 1.0
-Author: wdv
+Author: Michael Lämmlein
 Author URI: https://github.com/Laemmi/
-Copyright 2015 wdv
+Copyright 2015 laemmi
 */
 
 /**
@@ -31,7 +31,7 @@ Copyright 2015 wdv
  * @category    laemmi-yourls-admin
  * @package     plugin.php
  * @author      Michael Lämmlein <laemmi@spacerabbit.de>
- * @copyright   ©2015 wdv
+ * @copyright   ©2015 laemmi
  * @license     http://www.opensource.org/licenses/mit-license.php MIT-License
  * @version     1.0.0
  * @since       13.10.15

@@ -21,7 +21,7 @@
  * @category    laemmi-yourls-admin
  * @package     Plugin.php
  * @author      Michael Lämmlein <laemmi@spacerabbit.de>
- * @copyright   ©2015 wdv
+ * @copyright   ©2015 laemmi
  * @license     http://www.opensource.org/licenses/mit-license.php MIT-License
  * @version     1.0.0
  * @since       04.11.15
@@ -344,7 +344,7 @@ class Plugin extends AbstractDefault
     {
         list($cells, $keyword, $url, $title, $ip, $clicks, $timestamp) = func_get_args();
 
-        $cells['url']['template'] = preg_replace("/^\<a.*?\<\/small\>/", '<div class="wdv_url"><a href="%long_url%" title="%long_url%">%long_url_html%</a></div>', $cells['url']['template']);
+        $cells['url']['template'] = preg_replace("/^\<a.*?\<\/small\>/", '<div class="laemmi_url"><a href="%long_url%" title="%long_url%">%long_url_html%</a></div>', $cells['url']['template']);
 
         unset($cells['ip']);
 

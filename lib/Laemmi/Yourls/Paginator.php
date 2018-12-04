@@ -1,8 +1,5 @@
 <?php
 /**
- * Copyright 2007-2016 Andreas Heigl/wdv Gesellschaft für Medien & Kommunikation mbH & Co. OHG
- *
- *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -24,7 +21,7 @@
  * @category    laemmi-yourls-admin
  * @package     Paginator.php
  * @author      Michael Lämmlein <laemmi@spacerabbit.de>
- * @copyright   ©2007-2016 Andreas Heigl/wdv Gesellschaft für Medien & Kommunikation mbH & Co. OHG
+ * @copyright   ©2016 laemmi
  * @license     http://www.opensource.org/licenses/mit-license.php MIT-License
  * @version     2.7.0
  * @since       22.02.16
