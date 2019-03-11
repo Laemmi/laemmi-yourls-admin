@@ -146,7 +146,10 @@ class Plugin extends AbstractDefault
     public function action_admin_page_before_form()
     {
         $panels = [];
-        $panels[] = 'form_new_url-panel-shorturl.twig';
+
+        if ($this->_hasPermission(self::PERMISSION_ACTION_ADD)) {
+            $panels[] = 'form_new_url-panel-shorturl.twig';
+        }
 
         if($this->_hasPermission(self::PERMISSION_ACTION_ADD_PROJECT)) {
             $panels[] = 'form_new_url-panel-project.twig';
@@ -169,13 +172,16 @@ class Plugin extends AbstractDefault
         $projects = $this->getSession('projects', 'wdv-yourls-bind-user-to-entry');
 
         echo '</div>';
-        echo $this->getTemplate()->render('form_new_url', [
-            'nonce_add' => yourls_create_nonce('add_url'),
-            'panels' => $panels,
-            'projectlist' => $projectlist,
-            'projectlist_value' => $projects?$projects:$projectlist,
-            'shorturl_charset' => yourls_get_shorturl_charset()
-        ]);
+
+        if ($this->_hasPermission(self::PERMISSION_ACTION_ADD)) {
+            echo $this->getTemplate()->render('form_new_url', [
+                'nonce_add' => yourls_create_nonce('add_url'),
+                'panels' => $panels,
+                'projectlist' => $projectlist,
+                'projectlist_value' => $projects ? $projects : $projectlist,
+                'shorturl_charset' => yourls_get_shorturl_charset()
+            ]);
+        }
 
         global $is_bookmark, $return;
         // If bookmarklet, add message. Otherwise, hide hidden share box.
